@@ -33,6 +33,7 @@ Curation:
 Persistence + dispatch:
 - `scripts/intel_update.sh` — merge + persist + markdown report + dispatch tracking hook
 - `scripts/dispatch_update.sh` — maintain `catalog.json` + dual queue files + dispatch status fields
+- `scripts/dispatch_mark_read.sh` — mark a queued paper as reviewed by downstream stage
 - `scripts/run_pipeline.sh` — one-shot end-to-end pipeline
 
 Utilities:
@@ -71,8 +72,12 @@ Default paths (override via env vars):
 Catalog dispatch fields:
 - `dispatch_status.sent_to_tech_review`
 - `dispatch_status.sent_to_tech_review_at`
+- `dispatch_status.reviewed_by_tech_review`
+- `dispatch_status.reviewed_by_tech_review_at`
 - `dispatch_status.sent_to_strategy_review`
 - `dispatch_status.sent_to_strategy_review_at`
+- `dispatch_status.reviewed_by_strategy_review`
+- `dispatch_status.reviewed_by_strategy_review_at`
 
 ## Dispatch control
 

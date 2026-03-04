@@ -142,8 +142,12 @@ for p in papers:
             "dispatch_status": {
                 "sent_to_tech_review": False,
                 "sent_to_tech_review_at": None,
+                "reviewed_by_tech_review": False,
+                "reviewed_by_tech_review_at": None,
                 "sent_to_strategy_review": False,
                 "sent_to_strategy_review_at": None,
+                "reviewed_by_strategy_review": False,
+                "reviewed_by_strategy_review_at": None,
             },
         }
 
@@ -164,8 +168,12 @@ for p in papers:
     ds = entry.setdefault("dispatch_status", {})
     ds.setdefault("sent_to_tech_review", False)
     ds.setdefault("sent_to_tech_review_at", None)
+    ds.setdefault("reviewed_by_tech_review", False)
+    ds.setdefault("reviewed_by_tech_review_at", None)
     ds.setdefault("sent_to_strategy_review", False)
     ds.setdefault("sent_to_strategy_review_at", None)
+    ds.setdefault("reviewed_by_strategy_review", False)
+    ds.setdefault("reviewed_by_strategy_review_at", None)
 
     if "tech_review" in targets and not ds.get("sent_to_tech_review"):
         queue_append(

@@ -47,6 +47,7 @@ Curation:
 Persistence/dispatch:
 - `scripts/intel_update.sh`
 - `scripts/dispatch_update.sh`
+- `scripts/dispatch_mark_read.sh`
 - `scripts/run_pipeline.sh`
 
 ## Typical manual flow
@@ -83,4 +84,11 @@ DISPATCH_TARGETS=tech_review bash scripts/intel_update.sh /tmp/ranked.json
 
 ```bash
 DISPATCH_TARGETS=tech_review,strategy_review bash scripts/intel_update.sh /tmp/ranked.json
+```
+
+- After downstream reading/review is finished, mark the paper as reviewed:
+
+```bash
+bash scripts/dispatch_mark_read.sh "<paper_key>" tech_review bingbu-agent "completed technical review"
+bash scripts/dispatch_mark_read.sh "<paper_key>" strategy_review hanlinyuan-agent "completed strategy review"
 ```
