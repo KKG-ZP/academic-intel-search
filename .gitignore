@@ -1,0 +1,22 @@
+# Environment variables
+.env
+
+# Data files
+data/*.json
+data/*.sqlite
+data/*.sqlite3
+
+# Temporary files
+*.tmp
+/tmp/
+.DS_Store
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
